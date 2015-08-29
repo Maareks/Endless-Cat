@@ -166,13 +166,13 @@ public class InputController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Jump")) {
-            playerController.Jump(false);
-        } else if (Input.GetButtonDown("Slide")) {
-            playerController.Slide();
-        } else if (Input.GetButtonDown("Attack")) {
-            playerController.Attack();
-        }
+       // if (Input.GetButtonDown("Jump")) {
+       //     playerController.Jump(false);
+       // } else if (Input.GetButtonDown("Slide")) {
+       //     playerController.Slide();
+       // } else if (Input.GetButtonDown("Attack")) {
+       //     playerController.Attack();
+      //  }
         
         // Move horizontally if the player moves their mouse more than mouseXDeltaValue within a specified amount of time
         if (useMouseToMoveHorizontally) {
