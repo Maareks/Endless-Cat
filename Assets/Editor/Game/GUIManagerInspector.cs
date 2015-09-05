@@ -41,6 +41,7 @@ namespace InfiniteRunner.Game
             DrawProperty(serializedObject, "logoPanel", "Logo Panel");
 
             GUILayout.Label("In Game", "BoldLabel");
+			DrawProperty(serializedObject, "screenTouch", "On Screen Controlls");
             DrawProperty(serializedObject, "inGameLeftPanel", "Left Panel");
             DrawProperty(serializedObject, "inGameTopPanel", "Top Panel");
             DrawProperty(serializedObject, "inGameRightPanel", "Right Panel");

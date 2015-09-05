@@ -111,10 +111,13 @@ namespace InfiniteRunner.Game
         {
             gameActive = true;
             inputController.StartGame();
+
             guiManager.ShowGUI(GUIState.InGame);
             audioManager.PlayBackgroundMusic(true);
             cameraController.StartGame(fromRestart);
             playerController.StartGame();
+
+
             if (OnStartGame != null) {
                 OnStartGame();
             }

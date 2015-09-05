@@ -26,6 +26,7 @@ namespace InfiniteRunner.Game
         public bool useuGUI = false;
 #endif
 
+		public GameObject screenTouch;
         public GameObject mainMenuPanel;
         public GameObject logoPanel;
         public GameObject inGameLeftPanel;
@@ -196,6 +197,7 @@ namespace InfiniteRunner.Game
             lastClickTime = -clickDelay;
 
             // hide everything except the main menu
+			screenTouch.SetActive(false);
             mainMenuPanel.SetActive(true);
             logoPanel.SetActive(true);
             inGameLeftPanel.SetActive(false);
@@ -222,8 +224,13 @@ namespace InfiniteRunner.Game
 
         public void ShowGUI(GUIState state)
         {
+			screenTouch.SetActive(false);
+
             switch (state) {
                 case GUIState.InGame:
+
+					screenTouch.SetActive(true);
+
                     if (tutorialShown) {
                         tutorialPanel.SetActive(true);
                     }

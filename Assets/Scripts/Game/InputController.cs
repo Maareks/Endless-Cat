@@ -70,8 +70,34 @@ public class InputController : MonoBehaviour
         enabled = false;
     }
 
+	public void LeftScreenTouch()
+	{
+		bool hasTurned = false;
+		hasTurned = playerController.Turn(false, true);
+		
+		// can move horizontally if the player hasn't turned
+		if (!hasTurned) 
+			playerController.ChangeSlots(false);
+		
+	}
+	
+	
+	public void RightScreenTouch()
+	{
+			bool hasTurned = false;
+			hasTurned = playerController.Turn(true, true);
+			
+			// can move horizontally if the player hasn't turned
+			if (!hasTurned) 
+				playerController.ChangeSlots(true);
+
+	}
+
     public void Update()
     {
+
+
+		/*
 #if !UNITY_EDITOR && (UNITY_IPHONE || UNITY_ANDROID || UNITY_BLACKBERRY || UNITY_WP8)
         if (Input.touchCount == 1) {
             Touch touch = Input.GetTouch(0);
@@ -203,6 +229,8 @@ public class InputController : MonoBehaviour
             }
         }
 #endif
+
+*/
     }
 
 #if !UNITY_EDITOR && (UNITY_IPHONE || UNITY_ANDROID || UNITY_BLACKBERRY || UNITY_WP8)
